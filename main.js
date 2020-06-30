@@ -14,6 +14,8 @@ const getRandomNumber = function () {
   return randomNumber;
 };
 
+console.log(getRandomNumber());
+
 // Creamos una función handler para chequear el valor del input y abrir un mensaje u otro en función del resultado
 
 function checkNumber() {
