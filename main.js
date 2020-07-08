@@ -1,35 +1,69 @@
 "use strict";
 
-const inputUserNumber = document.querySelector(".js-userNumber");
+//referncia a los elementos HTML sobre los que quiero actuar
+
+const numberInput = document.querySelector(".js-number");
+
+const clue = document.querySelector(".js-clue");
+const attemptsInput = document.querySelector(".js-attemps");
+console.log(attemptsInput);
+
+// Creamos una función para generar un número aleatorio al cargar el navegador y recogemos el resultado en una constante.
+
+const randomNumber = getRandomNumber();
+
+function getRandomNumber() {
+  const number = Math.floor(Math.random() * (101 - 1) + 1);
+  return number;
+}
+
+console.log(randomNumber);
+
+// Recoger el número que escribe la usuaria
+
+//constante que recoge el valor del input
+
+function getInputValue() {
+  let inputValue = parseInt(numberInput.value);
+  return inputValue;
+}
+
+// console.log(getInputValue());
+
 const btn = document.querySelector(".js-testBtn");
-const inputClue = document.querySelector(".js-clue");
-const inputAttemps = document.querySelector(".js-attempNumber");
 
-let attempts = 0;
+btn.addEventListener("click", handleGame);
 
-// Creamos una función par generar un número aleatorio al cargar el navegador y recogemos el resultado en una constante.
-
-const getRandomNumber = function () {
-  const randomNumber = parseInt(Math.random() * 100);
-  return randomNumber;
-};
-
-console.log(getRandomNumber());
-
-// Creamos una función handler para chequear el valor del input y abrir un mensaje u otro en función del resultado
+function handleGame(ev) {
+  ev.preventDefault();
+  // console.log("me han pulsado");
+  checkNumber();
+  countAttempts();
+}
 
 function checkNumber() {
-  const UserNumberValue = inputUserNumber.value;
-  if (UserNumberValue === randomNumber) {
-    alert("Has ganado, campeona!");
-    attemps = 0;
-  } else if (UserNumberValue > randomNumber) {
-    alert("Número demasiado alto.");
-  } else {
-    alert("Número demasiado bajo.");
+  // console.log("hola");
+  const inputNumber = getInputValue();
+  // console.log(inputNumber);
+
+  if (inputNumber < randomNumber) {
+    clue.innerHTML = "Pista: Demasiado bajo.";
+  }
+  if (inputNumber > randomNumber) {
+    clue.innerHTML = "Pista: Demasiado alto.";
+  }
+  if (inputNumber > 100 || inputNumber < 1) {
+    clue.innerHTML = "Pista: El número debe estar entre 1 y 100.";
+  }
+  if (inputNumber === randomNumber) {
+    clue.innerHTML = "Has ganado campeona!!!";
   }
 }
 
-//Creamos un listener para escuchar el evento y ejecutar la función handler checkNumber
-
-btn.addEventListener("click", checkNumber);
+// contador del número de intentos
+let attempts = 0;
+function countAttempts() {
+  attempts++;
+  console.log(attempts);
+  attemptsInput.innerHTML = attempts;
+}
