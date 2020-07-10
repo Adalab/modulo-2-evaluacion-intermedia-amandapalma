@@ -6,7 +6,7 @@ const numberInput = document.querySelector(".js-number");
 
 const clue = document.querySelector(".js-clue");
 const attemptsInput = document.querySelector(".js-attemps");
-console.log(attemptsInput);
+// console.log(attemptsInput);
 
 // Creamos una función para generar un número aleatorio al cargar el navegador y recogemos el resultado en una constante.
 
@@ -17,7 +17,7 @@ function getRandomNumber() {
   return number;
 }
 
-console.log(randomNumber);
+// console.log(randomNumber);
 
 // Recoger el número que escribe la usuaria
 
