@@ -8,8 +8,38 @@ body {
   align-items: flex-start;
 }
 
-.Btn {
+.number {
+  background-color: lightgrey;
+  border: 0;
+  border-radius: 3%;
+  height: 30px;
+  width: 300px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.btn {
   background-color: aquamarine;
   color: white;
   font-weight: bold;
+  border: 0;
+  border-radius: 5%;
+  height: 30px;
+  width: 80px;
+}
+.clue {
+  border: 3px solid lightgrey;
+  height: 30px;
+  width: 400px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.attemps {
+  border: 3px solid lightgrey;
+  height: 30px;
+  width: 400px;
+  line-height: 30px;
+  padding-left: 10px;
 }
