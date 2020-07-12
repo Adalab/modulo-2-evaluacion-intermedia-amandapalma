@@ -11,14 +11,15 @@ body {
 .number {
   background-color: lightgrey;
   border: 0;
-  border-radius: 5%;
+  border-radius: 3%;
   height: 30px;
-  width: 150px;
+  width: 300px;
+  padding-left: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-.Btn {
+.btn {
   background-color: aquamarine;
   color: white;
   font-weight: bold;
@@ -27,17 +28,18 @@ body {
   height: 30px;
   width: 80px;
 }
+.clue {
+  border: 3px solid lightgrey;
+  height: 30px;
+  width: 400px;
+  line-height: 30px;
+  padding-left: 10px;
+}
 
 .attemps {
   border: 3px solid lightgrey;
   height: 30px;
   width: 400px;
   line-height: 30px;
-}
-
-.clue {
-  border: 3px solid lightgrey;
-  height: 30px;
-  width: 400px;
-  line-height: 30px;
+  padding-left: 10px;
 }

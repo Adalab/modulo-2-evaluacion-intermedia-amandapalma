@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Módulo 2 - evaluación intemedia Amanda Palma</title>
-   
   </head>
   <body>
       <h1>Adivina el número</h1>
       <Form class="form">
-        <label>Introduce aquí tu número:</label>
-        <input class="js-number number" type="number"  name="number" ></input>
-        <input class="js-testBtn Btn" type= "submit" value= "Prueba" ></input>
+        <label for="number">Introduce aquí tu número:</label>
+        <input class="js-number number" type="number"  id="number" name="number"placeholder="introduce un número entre el 1 y el 100" ></input>
+        <input class="js-testBtn btn" type= "submit" value= "Prueba" ></input>
       </Form>
       <div class="text">
         <p class="js-clue clue">Pista: Escribe el número y dale a Prueba</p>
         <p class="attemps"> Número de intentos: <span class="js-attemps">0</span></p>
       </div>
-      <!-- <audio autoplay src="./music/loop2.mp3" type="audio/mp3" loop></audio> -->
-
-      
     <script type="text/javascript" src="./main2.js"></script>
   </body>
 </html>
